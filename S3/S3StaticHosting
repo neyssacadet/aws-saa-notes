@@ -1,0 +1,14 @@
+Normal access is via AWS APIs. 
+for S3, access via HTTP. Index (entrypoint to most websites) and error documents have to be set [HTML]
+Website endpoint is created. Make sure S3 bucket is named the way you want to name your website 
+
+S3 cheaper for storage because that it is for!
+
+2 scenarios perfect for S3: Offloading VS Out of band pages 
+The offloading hosting is to use an s3 bucket to store static content for a website. 
+Out-of-band page hosting means having a static website ready and using DNS to redirect users to this WebSite when your servers are over maintenance or unavailable.
+
+S3 Pricing
+- per GB for cost 
+- data transfer in --> free 
+- data transfer out --> $ 
