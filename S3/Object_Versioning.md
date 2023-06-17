@@ -33,3 +33,10 @@ To actually delete an object, we need to specify a particular version ID when de
 ### MFA Delete
 
 MFA Delete is a feature that can be enabled to require MFA to change bucket versioning states, or to fully delete versions of objects.
+
+OBJECT VERSIONING 
+- cannot be switched off only suspended 
+- space is consumed by all versions 
+- only way to 0 costs is to delete the bucket 
+
+
