@@ -15,5 +15,7 @@ Services run from within subnets (which is where IP addresses are allocated from
 Tiers are different types of infrastructure that run from within a VPC.
 thout any further information provided, some basic guidelines to structure a VPC would be:
 
-- Start with three subnets, but allow yourself a spare to grow into
+- Start with three subnets, but also allow yourself a spare to grow into
 - Start with three tiers, and again allow yourself a spare to grow into
+
+/20 is equal to the size of 16 /16.
