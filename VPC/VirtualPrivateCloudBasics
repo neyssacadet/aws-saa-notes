@@ -1,0 +1,26 @@
+# Virtual Private Cloud Basics 
+Regional isolated private network within AWS cloud that other private services can run from. 
+Used to connect your AWS private networks to your on-premise networks when creating a hybrid environment. 
+Used to connect to other cloud platforms for multi cloud deployment.
+
+## Key Points 
+Virtual network within AWS within 1 account and 1 region. Regionally resilient
+Private and isolated unless decided otherwise (default) 
+
+2 types of VPC :
+- 0-1 Default VPC (created by AWS, preconfigured, handled by AWS, less flexible) 
+- 0+ Custom VPCs 
+
+## Default VPC 
+Every VPC is allocated a range of IP --> VPC CIDR (range of IP addresses that VPC can use). Only 1 VPC CIDR (172.31.0.0/16) 
+
+Each subnet located in 1 availability zone in that region. They cannot have overlapping or identical IP addresses. 
+VPC resilient -> Deployed into region and split into subnets.
+
+## Default VPC Facts 
+- One per region - can be removed and recreated (A region can have 0 VPCs) 
+- Always 172.31.0.0/16 as VPC CIDR 
+- /20 subnet in each AZ in the region 
+- The higher the CIDR /number is, the smaller the network is 
+- Internet Gateway, Security Group and NACL
+- Subnets assigned public IPv4 addresses 
