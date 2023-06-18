@@ -1,0 +1,26 @@
+# Key Managment Service (KMS) 
+regional and public service (oocupies the AWS public zone) 
+Create, store and manage keys (symmetric and assymmetric keys). Ability to perform cryptographic operations. Keys never leave KMS. Provides FIPS 140-2 (L2)
+
+##assume symmetric keys 
+KMS Keys are used within cryptographic operations. Contains ID, date, policy, desc and state. Backed by physical key material. Can be generated or imported. Can be used for up to 4kb
+Stored in encrypted form. 
+
+## Data Encryption Keys
+Generated using GenerateDataKey operation to work on >4kb. 2 versions of key:
+- plaintext version 
+- ciphertext version 
+
+Encrypts data using plaintext key then discards. Store encrypted key with data.
+
+## Key Concepts 
+KMS keys are isolated to a region and never leave 
+AWS owned and customer owned 
+AWS managed or customer managed Keys 
+Cusomer managed keys are more configurable 
+KMS keys support rotation 
+
+
+## Key Policies and Security 
+Key policies --> resource policy 
+Every key has one. 
