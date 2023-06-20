@@ -20,6 +20,17 @@ Which Storage class to use (Default is to maintain, can be overriden)
 Ownership - default is the source account
 RTC Replication Time Control. guaranteed level of predictability, and it monitors. (15 minutes of replication)
 
+
+
+## Why use replication? Use Cases 
+- Log Aggregation
+- PROD and TEST Synchronization
+- Resilience with strict sovereignty
+- Latency reduction
+  
+# S3 Presigned URLs
+eature of S3 which allows the system to generate a URL with access permissions encoded into it, for a specific bucket and object, valid for a certain time period.
+
 ## Powerup
 Replication is not retroactive by default.
 Versioning needs to enabled 
@@ -29,11 +40,6 @@ Unencrypted
 Source bucket owner nedds permissions to objects 
 No system events, Glacier or Glacier Deep Archive (Cannot be replicated) 
 No deletes are replicated. Can enable it though 
-
-## Why use replication? Use Cases 
-- Log Aggregation
-- PROD and TEST Synchronization
-- Resilience with strict sovereignty
-- Latency reduction
-  
-
+Can create a URL for an object you have no access to 
+When using the URL, the permissions match the identity that generated it 
+Dont generate URL with a role. URL stops working when temporary credentials expire. 
