@@ -17,5 +17,7 @@ Tiers are different types of infrastructure that run from within a VPC.
 
 Without any further information provided, some basic guidelines to structure a VPC would be:
 
-- Start with three subnets, but allow yourself a spare to grow into
+- Start with three subnets, but allow yourself a spare to grow into (4AZ)
 - Start with three tiers, and again allow yourself a spare to grow into
+
+
