@@ -1,0 +1,21 @@
+VPC 
+Virtual network inside AWS wiithin 1 account, 1 region and multi AZ. Private and isolated unless decided otherwise. Except default VPC. Regionally resilient
+2 types:
+- 1 default VPC per region (initially created by AWS, preconfigured, less flexible) 
+- 0+ custom VPCs (can be configured like you want) 
+
+VPC CIDR --> the IP address range VPC can use. 
+Default VPC always use 172.31.0.0/16 
+
+VPC can be divided into subnetworks
+1 subnet in 1 AZ in each region. IP addresses of subnets cannot be the same and cannot overlap. 
+
+Default VPC Facts:
+- 0-1 per region (can be removed and recreated) 
+- Default VPC CIDR 172.31.0.0/16 
+- /20 subnet in each AZ in the region (# of subnets depend on # of AZ in region)
+The higher the CIDR range /number is, the smaller the network
+2 /17 will fit into /16
+16 /20 will into /16
+- provided with Internet Gateway, Security Group and NACL
+- subnets assign public IPv4 addresses. 
