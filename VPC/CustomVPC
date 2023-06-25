@@ -1,0 +1,14 @@
+VPC regionally isolated and resilient. Regional service. Multiple VPCs in a region. Nothing in or OUT without explicit configuration 
+Flexible. Supports Hybrid Networking
+Default (shared hardware, can change later on) or dedicated tenancy (dedicated hardware, locked in, only to picked if you know fosho)
+Custom VPCs:
+- IPv4 Private CIDR Blocks and Public IPs (Private CIDR block is the main method of communication for the VPC, public IPs is if you want to make the resources public, with the public internet or AWS public zone.
+- 1 primary private IPv4 CIDR block (mandatory, 2 restrictions:
+- min/28 (16 IP) max/16 (65,536 IP) 
+- optional secondary IPv4 blocks 
+- optional single assigned IPv6/56 CIDR block 
+
+AWS VPC also have fully featured DNS provided by R53 , it is available on Base IP + 2 Address. 
+Functions:
+- enableDNSHostnames - gives instances DNS names 
+- enableDNSSupport - Enables DNS resolution in VPC 
