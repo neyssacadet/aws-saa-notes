@@ -1,4 +1,14 @@
 # Stateful Vs Stateless Firewalls
+TCP connection based protocol established btw 2 devices using a random port on a client and a known port on the server. Runs on top of IP. Once established, the connection is bidirectional.
+HTTPS --> TCP/443
+HTTP --> TCP/
+
+Every connection has:
+- request
+- response
+
+Client chooses a temporary/ephemeral source port, initiates a connection on the Server on a well known destination port HTTPS tcp/443 (REQUEST)
+Server responds back using source port of tcp/443 and the destination ephemeral port picked by client (RESPONSE) 
 
 ## Stateless Firewalls
 
